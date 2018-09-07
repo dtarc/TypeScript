@@ -550,6 +550,7 @@ declare namespace FourSlashInterface {
         // details
         readonly text?: string,
         readonly documentation?: string,
+        readonly tags?: ReadonlyArray<JSDocTagInfo>;
         readonly sourceDisplay?: string,
     };
 
@@ -632,8 +633,8 @@ declare namespace FourSlashInterface {
     }
 
     interface JSDocTagInfo {
-        name: string;
-        text: string | undefined;
+        readonly name: string;
+        readonly text: string | undefined;
     }
 
     type ArrayOrSingle<T> = T | ReadonlyArray<T>;
